@@ -8,10 +8,9 @@ export class UIScene extends Scene {
 
     create () {
         this.gameScene = this.scene.get('Game');
-        this.hpCounter = this.add.text(0, 0, `HP: 3`, {
-            fontSize: '16px',
-            fill: '#ffffff'
-        });
+        this.hpCounter = this.add.bitmapText(0, 0, `globalFont`, 'HP: 3', 16, 0);
+        this.hpCounter.setTintFill(0xffffff);
+
 
         this.gameScene.events.on('playerLost', () => {
             this.add.rectangle(0, 0, this.scale.width, this.scale.height, 0x000000, 0.5).setOrigin(0);
@@ -30,22 +29,6 @@ export class UIScene extends Scene {
                 align: 'center'
             }).setOrigin(0.5);
         });
-
-        /*
-        this.timerText = this.add.text(0, 16, 'Time: 60', {
-            fontSize: '16px',
-            fill: '#ffffff'
-        });
-
-        this.gameScene.events.on('updateTime', (seconds) => {
-            this.timerText.setText(`Time: ${seconds}`);
-        });
-
-
-        this.gameScene.events.on('deductHP', (hp) => {
-            this.hpCounter.setText(`HP: ${hp}`);
-        }, this);
-        */
         
     }
 }

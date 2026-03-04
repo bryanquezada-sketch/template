@@ -11,7 +11,7 @@ export class MainMenu extends Scene
     {
         this.add.image(0, 0, 'background').setOrigin(0).setDisplaySize(this.scale.width, this.scale.height);
 
-        const phaserLogo = this.add.image(this.scale.width / 2, this.scale.height / 2 - 5, 'logo').setOrigin(0.5).setScale(0.5);
+        const phaserLogo = this.add.image(this.scale.width / 2, this.scale.height / 2, 'logo').setOrigin(0.5).setScale(0.5);
 
         const madeWith = this.add.bitmapText(this.scale.width / 2, this.scale.height / 2 - 40, 'globalFont', 'M A D E  W I T H', 8).setOrigin(0.5);
         madeWith.setTintFill(0xffffff);
@@ -34,7 +34,7 @@ export class MainMenu extends Scene
         
         this.input.once('pointerdown', () => {
 
-            this.cameras.main.fadeOut(1000, 0, 0, 0);
+            this.cameras.main.fadeOut(750, 0, 0, 0);
 
             this.cameras.main.once(Phaser.Cameras.Scene2D.Events.FADE_OUT_COMPLETE, () => {
                 this.scene.start('Game');
