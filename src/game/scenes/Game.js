@@ -9,20 +9,20 @@ export class Game extends Scene
 
     create ()
     {
-        this.cameras.main.setBackgroundColor(0x00ff00);
+        this.scene.launch('UIScene');
+        this.scene.bringToTop('UIScene');
+        this.cameras.main.setBackgroundColor(0x141414);
 
-        this.add.image(512, 384, 'background').setAlpha(0.5);
+        this.player = this.physics.add.sprite(this.scale.width / 2, this.scale.height / 2, 'player');
+        this.player.setCollideWorldBounds(true);
+        Phaser.Display.Bounds.SetBottom(this.player, this.scale.height);
 
-        this.add.text(512, 384, 'Make something fun!\nand share it with us:\nsupport@phaser.io', {
-            fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
-            stroke: '#000000', strokeThickness: 8,
-            align: 'center'
-        }).setOrigin(0.5);
-
-        this.input.once('pointerdown', () => {
-
-            this.scene.start('GameOver');
-
+        this.cursors = this.input.keyboard.createCursorKeys();
+        this.wasd = this.input.keyboard.addKeys ({
+            up: Phaser.Input.Keyboard.KeyCodes.W,
+            down: Phaser.Input.Keyboard.KeyCodes.S,
+            left: Phaser.Input.Keyboard.KeyCodes.A,
+            right: Phaser.Input.Keyboard.KeyCodes.D,
         });
     }
 }

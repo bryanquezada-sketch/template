@@ -9,13 +9,19 @@ export class MainMenu extends Scene
 
     create ()
     {
-        this.add.image(512, 384, 'background');
+        this.add.image(0, 0, 'background').setOrigin(0).setDisplaySize(this.scale.width, this.scale.height);
 
-        this.add.image(512, 300, 'logo');
+        this.add.image(this.scale.width / 2, this.scale.height / 2, 'logo').setOrigin(0.5).setScale(0.5);
 
-        this.add.text(512, 460, 'Main Menu', {
-            fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
-            stroke: '#000000', strokeThickness: 8,
+        this.add.text(this.scale.width / 2, this.scale.height / 2 - 35, 'MADE WITH', {
+            fontFamily: 'Arial Black', fontSize: 10, color: '#ffffff',
+            stroke: '#000000', strokeThickness: 4,
+            align: 'center'
+        }).setOrigin(0.5);
+
+        this.add.text(this.scale.width / 2, this.scale.height / 2 + 50, 'Click to Start', {
+            fontFamily: 'Arial Black', fontSize: 14, color: '#ffffff',
+            stroke: '#000000', strokeThickness: 6,
             align: 'center'
         }).setOrigin(0.5);
 
