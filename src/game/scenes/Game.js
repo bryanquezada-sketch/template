@@ -8,7 +8,7 @@ export class Game extends Scene
     }
 
     create ()
-    {
+    {        
         this.scene.launch('UIScene');
         this.scene.bringToTop('UIScene');
         this.cameras.main.setBackgroundColor(0x141414);

@@ -81,9 +81,9 @@ const config = {
     scene: [
         Boot,
         Preloader,
-        UIScene,
         MainMenu,
         MainGame,
+        UIScene,
         GameOver
     ]
 };

@@ -33,6 +33,12 @@ export class Preloader extends Scene
         this.load.setPath('assets');
 
         this.load.image('logo', 'logo.png');
+
+        //CHOOSE YOUR FONT! CHECK NOTES!
+        this.load.bitmapFont('globalFont', 'fonts/press_start_2p.png', 'fonts/press_start_2p.xml');
+
+
+
     }
 
     create ()

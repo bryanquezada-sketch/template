@@ -6,6 +6,7 @@ Jacquard 12	        12px	        Decorative / Gothic	    Fantasy themes, "Game O
 Bitmgothic	        12px	        Clean / Technical	    Cyberpunk themes, terminal logs, inventory lists, or "system" messages.
 Yoster Island	    12px/16px	    Playful / Nintendo	    Casual games, friendly UI, tutorial pop-ups, and whimsical "Pop-up" text.
 
+-------
 
 press_start_2p was made with https://snowb.org/ at 8px. 
 Check your Game Resolution: If your game is "low-res" (e.g., 320x180 or 640x360), use 8px. 16px text will look massive on a small canvas.
